@@ -3,14 +3,12 @@
 
 using namespace std;
 
-
 template<typename T>
 struct List
 {
 public:
 	List();
 	~List();
-
 	
 
 	int Size;//кол-во эл-ов в списке
@@ -29,7 +27,7 @@ public:
 	{
 		return Size ? 1 : 0;
 	};
-	void variant_task(List second_list);
+	const void variant_task(List& second_list);
 
 private:
 
@@ -69,6 +67,7 @@ inline void List<T>::push_back(T data)//+
 {
 	if (head == nullptr)
 	{
+		
 		head = tail = new Node<T>(data);
 	}
 	else
@@ -299,7 +298,7 @@ inline void List<T>::changeAt(T data, int index)
 }
 
 template<typename T>
-inline void List<T>::variant_task(const List<T> second_list)
+inline const void List<T>::variant_task(List<T>& second_list)
 {
 	int counter = this->getSize();
 	if (second_list.getSize() > this->getSize() || second_list.getSize() == 0)
@@ -324,7 +323,7 @@ inline void List<T>::variant_task(const List<T> second_list)
 			{
 				elem_a = elem_a->pNext;
 				elem_b = elem_b->pNext;
-				if (elem_b->pNext == nullptr)
+				if (elem_b == nullptr)
 				{
 					cout << counter;
 					return;
@@ -334,4 +333,5 @@ inline void List<T>::variant_task(const List<T> second_list)
 		current = current->pPrev;
 		counter--;
 	}
+
 }

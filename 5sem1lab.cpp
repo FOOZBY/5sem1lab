@@ -13,7 +13,7 @@ int main()
 	cout << "введите элементы 1-ого списка" << endl;
 	for (int i = 0; i < length; i++)
 	{
-		cin >> elem;
+		cin >> elem;//5
 		first_list.push_back(elem);
 	}
 
@@ -22,8 +22,9 @@ int main()
 	cout << "введите элементы 2-ого списка" << endl;
 	for (int i = 0; i < length; i++)
 	{
-		cin >> elem;
+		cin >> elem;//5
 		second_list.push_back(elem);
+		//elem 4
 	}
 
 	cout << "последнее вхождение 2-ого списка в первый на ";
