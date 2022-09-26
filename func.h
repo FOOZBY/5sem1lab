@@ -27,7 +27,7 @@ public:
 	{
 		return Size ? 1 : 0;
 	};
-	const void variant_task(List& second_list);
+	void variant_task(List& second_list);
 
 private:
 
@@ -298,7 +298,7 @@ inline void List<T>::changeAt(T data, int index)
 }
 
 template<typename T>
-inline const void List<T>::variant_task(List<T>& second_list)
+inline void List<T>::variant_task(List<T>& second_list)
 {
 	int counter = this->getSize();
 	if (second_list.getSize() > this->getSize() || second_list.getSize() == 0)

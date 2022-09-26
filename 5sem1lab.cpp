@@ -13,7 +13,7 @@ int main()
 	cout << "введите элементы 1-ого списка" << endl;
 	for (int i = 0; i < length; i++)
 	{
-		cin >> elem;//5
+		cin >> elem;
 		first_list.push_back(elem);
 	}
 
@@ -22,14 +22,13 @@ int main()
 	cout << "введите элементы 2-ого списка" << endl;
 	for (int i = 0; i < length; i++)
 	{
-		cin >> elem;//5
+		cin >> elem;
 		second_list.push_back(elem);
-		//elem 4
 	}
 
 	cout << "последнее вхождение 2-ого списка в первый на ";
 	first_list.variant_task(second_list);
 	cout << " элементе";
-
+	system("pause");
 	return 0;
 }
